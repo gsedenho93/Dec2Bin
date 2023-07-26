@@ -17,10 +17,11 @@ public class Main {
 			} catch (NumberFormatException e) {
 				JOptionPane.showMessageDialog(null, "Formato invalido, por favor digitar novamente");
 				validateInput=false;
+				break;
 			}
 		}
 		while(true) {
-			if (dec==1) {
+			if (dec==1 || (dec==0 && validateInput==true)) {
 				bin=bin.concat(String.valueOf(dec));
 				bin=new StringBuilder(bin).reverse().toString();
 				break;
